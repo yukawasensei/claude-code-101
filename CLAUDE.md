@@ -14,64 +14,53 @@
 
 ## 代码库概述
 
-这是一个面向非技术人员（运营人员、产品经理、数据分析师）的 Claude Code 中文教程代码库，通过两个实战案例教授如何使用 Claude Code 进行数据分析。
+这是一个面向非技术人员（运营人员、产品经理、数据分析师）的 Claude Code 中文教程代码库，通过实战案例教授如何使用提示词让 Claude Code 自动生成高质量数据分析报告。
 
 **目标用户**：需要数据分析能力的非技术专业人员
 **主要语言**：简体中文
+**教学重点**：提示词编写、skills 使用、自动化分析
 
 ## 代码库结构
 
 ```
 claude-code-101/
 ├── claude-code-101-tutorial.md    # 主教程文档（完整指南）
-├── case1-tiktok-analysis/         # 案例1：TikTok 视频表现分析
-│   ├── tiktok_data.csv           # 50条视频记录及互动数据
-│   └── generate_data.py          # 数据生成脚本
-├── case2-project-health/          # 案例2：软件项目健康度评估
-│   ├── docs/                     # 项目文档（PRD、决策记录、会议纪要）
-│   ├── data/                     # 项目数据（用户反馈、进度跟踪）
-│   └── scripts/                  # 数据生成和分析脚本
-└── templates/                     # 常用分析任务的提示词模板
+├── case1-tiktok-analysis/         # 案例：TikTok 直播+短视频运营分析
+│   ├── tiktok_data.csv           # 50条直播和视频记录及完整数据
+│   ├── generate_data.py          # 数据生成脚本
+│   └── README.md                 # 案例说明
+└── skills/                        # Skills 目录
+    └── live-ops-analytics/        # 直播运营分析 skill
 ```
 
 ## 案例说明
 
-### 案例1：TikTok 数据分析
-- **数据**：`case1-tiktok-analysis/tiktok_data.csv`（50条视频记录）
-- **目标**：识别高转化视频的特征
-- **技能**：数据探索、可视化、相关性分析、报告生成
-- **关键字段**：video_id（视频ID）、title（标题）、publish_date（发布日期）、publish_hour（发布小时）、views（播放量）、likes（点赞数）、comments（评论数）、shares（分享数）、duration（时长）、video_type（视频类型）、conversions（转化量）
-
-### 案例2：项目健康度评估
-- **数据来源**：
-  - 项目文档（PRD、技术决策、8周会议纪要）
-  - 用户反馈（CSV格式，100条记录）
-  - 进度跟踪（CSV格式，8周数据）
-- **目标**：评估项目健康度、识别风险、评估决策
-- **技能**：多源数据整合、趋势分析、风险识别、高管报告
-- **背景**：TaskFlow 项目 - 一个轻量级项目管理工具，在第4周面临关键决策（放弃AI功能以按时交付）
+### 案例：TikTok 直播+短视频运营分析
+- **数据**：`case1-tiktok-analysis/tiktok_data.csv`（50条记录）
+- **目标**：使用提示词让 Claude Code 自动生成深度分析报告和可视化网页
+- **技能**：提示词编写、skills 调用、报告生成、数据可视化
+- **关键字段**：
+  - 基础数据：video_id、title、publish_date、publish_hour、views、likes、comments、shares、duration、video_type、conversions
+  - 直播数据：live_uv、peak_online、avg_watch_time、gmv、order_conversion_rate
+  - 投流数据：ad_cost、cpm、roi
+  - 互动数据：danmu_count、gift_count、follow_conversion_rate
 
 ## 使用此代码库
 
 ### 数据生成
-两个案例都包含 Python 脚本来重新生成示例数据：
+案例包含 Python 脚本来重新生成示例数据：
 ```bash
-# 案例1
 cd case1-tiktok-analysis
-python generate_data.py
-
-# 案例2
-cd case2-project-health/scripts
 python generate_data.py
 ```
 
 ### 分析工作流程
 当用户请求数据分析时：
-1. **理解背景**：阅读相关的 README 文件和文档
-2. **探索数据**：加载 CSV 文件，检查结构，识别缺失值
-3. **分析**：执行统计分析、相关性研究、趋势识别
-4. **可视化**：使用 matplotlib/seaborn/plotly 创建图表
-5. **报告**：生成包含洞察和建议的 Markdown 报告
+1. **理解需求**：明确用户想要什么样的分析和输出
+2. **编写提示词**：清晰、具体、完整地描述需求
+3. **调用 skills**：使用 `/live-ops-analytics` 生成分析报告
+4. **生成可视化**：使用 `/frontend-design` 生成可视化网页
+5. **交付结果**：确保输出符合用户预期
 
 ### Python 依赖
 分析任务中常用的库：
@@ -85,44 +74,24 @@ python generate_data.py
 - 清晰易懂，避免专业术语
 - 必要时提供分步说明
 - 关注实际结果
+- 强调提示词编写技巧
 
-## 常见分析模式
+## 教学重点
 
-### 数据探索
-- 使用 pandas 加载 CSV
-- 显示基本统计信息（shape、dtypes、describe）
-- 检查缺失值
-- 显示样本行
+### 提示词编写
+- 如何清晰描述分析需求
+- 如何调用 skills（`/live-ops-analytics`、`/frontend-design`）
+- 如何在一个提示词中组合多个需求
+- 提供完整的提示词模板和示例
 
-### 可视化
-- 柱状图：用于分类比较
-- 散点图：用于相关性分析
-- 折线图：用于时间序列
-- 直方图：用于分布展示
+### Skills 使用
+- `/live-ops-analytics`：生成深度分析报告
+- `/frontend-design`：生成现代化可视化网页
+- 如何定制 skills 的输出
+- 如何组合使用多个 skills
 
-### 报告生成
-- 结构：概览 → 关键发现 → 洞察 → 建议
-- 格式：Markdown 格式，嵌入图表
-- 风格：专业但易于非技术读者理解
-
-## 特殊注意事项
-
-### 案例2的复杂性
-项目健康度案例涉及：
-- 多种文档类型（Markdown 文档、CSV 数据）
-- 时间分析（8周时间线）
-- 决策评估（第4周放弃AI功能的关键决策）
-- 叙事构建（识别转折点、因果关系）
-
-分析案例2时，注意：
-- 第4周紧急会议和决策理由
-- 关键决策前后的性能指标
-- 用户反馈随时间的模式
-- 团队士气和速度的变化
-
-### 教学目的
-这是一个学习型代码库。帮助用户时：
-- 解释分析选择背后的原因
-- 展示如何解读结果
-- 建议深入分析的下一步
-- 必要时参考模板库
+### 自动化分析
+- 一个提示词完成所有分析
+- 最小化学习曲线
+- 快速上手，立即产出
+- 重点展示结果，而不是过程

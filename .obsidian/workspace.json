@@ -11,10 +11,14 @@
             "id": "215c7d6e0344a158",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "claude-code-101-tutorial.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "claude-code-101-tutorial"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "claude-code-101-tutorial.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "claude-code-101-tutorial 的反向链接列表"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "claude-code-101-tutorial.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "claude-code-101-tutorial 的出链列表"
             }
           },
           {
@@ -150,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "case1-tiktok-analysis/README.md",
+                "file": "claude-code-101-tutorial.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "claude-code-101-tutorial 的大纲"
             }
           }
         ],
@@ -177,8 +183,10 @@
       "bases:新建数据库": false
     }
   },
-  "active": "1041a4c488ee1991",
+  "active": "215c7d6e0344a158",
   "lastOpenFiles": [
+    "case1-tiktok-analysis/README.md",
+    "case1-tiktok-analysis/generate_data.py",
     "skills/live-ops-analytics/SKILL.md",
     "skills/live-ops-analytics/output-ops.md",
     "skills/live-ops-analytics/output-management.md",
@@ -205,7 +213,6 @@
     "case1-tiktok-analysis/visualizations/duration_distribution.html",
     "case1-tiktok-analysis/visualizations/conversion_by_hour.html",
     "case1-tiktok-analysis/visualizations/views_vs_conversions.html",
-    "case1-tiktok-analysis/visualizations/conversion_by_type.html",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/scipy/fft/_pocketfft/LICENSE.md",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/scipy/ndimage/tests/dots.png",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/narwhals-2.17.0.dist-info/licenses/LICENSE.md",
@@ -214,7 +221,6 @@
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
-    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
-    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/distributions/LICENSE.md"
+    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md"
   ]
 }
