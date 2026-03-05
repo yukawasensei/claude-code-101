@@ -28,6 +28,7 @@ reports/
 output/
 *.html
 *.pdf
+!case1-tiktok-analysis/dashboard.html
 
 # IDE
 .vscode/
