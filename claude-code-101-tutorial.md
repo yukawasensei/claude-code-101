@@ -602,15 +602,6 @@ open dashboard.html
    - 图表自动适配屏幕大小
    - 触摸友好的交互设计
 
-**分享给团队**：
-
-```bash
-# 将报告和网页打包
-zip tiktok_analysis.zip analysis_report.md dashboard.html
-
-# 通过邮件或企业微信发送给团队
-```
-
 
 ### 5.5 学到了什么
 
