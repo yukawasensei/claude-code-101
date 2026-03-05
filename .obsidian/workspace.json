@@ -185,6 +185,15 @@
   },
   "active": "1041a4c488ee1991",
   "lastOpenFiles": [
+    "optimization-report.md",
+    "case1-tiktok-analysis/QUICK_START.md",
+    "case1-tiktok-analysis/scripts/quick_start.sh",
+    "case1-tiktok-analysis/HTML_REPORT_SUMMARY.md",
+    "case1-tiktok-analysis/scripts/validate_html_report.py",
+    "case1-tiktok-analysis/scripts/README_HTML_REPORT.md",
+    "case1-tiktok-analysis/tiktok_analysis_report.html",
+    "case1-tiktok-analysis/scripts/generate_html_report.py",
+    "case2-project-health/example-report.md",
     "case1-tiktok-analysis/RESULTS.md",
     "case1-tiktok-analysis/reports/insights.md",
     "case1-tiktok-analysis/reports/analysis_report.md",
@@ -194,10 +203,6 @@
     "case1-tiktok-analysis/visualizations/views_vs_conversions.html",
     "case1-tiktok-analysis/visualizations/conversion_by_type.html",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/pandas-3.0.1.dist-info/REQUESTED",
-    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/pandas-3.0.1.dist-info/INSTALLER",
-    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/pandas/util/version/__pycache__/__init__.cpython-314.pyc",
-    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/pandas/util/version/__pycache__",
-    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/pandas/util/__pycache__/_test_decorators.cpython-314.pyc",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/scipy/fft/_pocketfft/LICENSE.md",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/scipy/ndimage/tests/dots.png",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/narwhals-2.17.0.dist-info/licenses/LICENSE.md",
@@ -216,11 +221,6 @@
     "CLAUDE.md",
     "templates/visualization-templates.md",
     "templates/report-templates.md",
-    "templates/data-analysis-templates.md",
-    "case1-tiktok-analysis/README.md",
-    "claude-code-101-tutorial.md",
-    "case2-project-health/README.md",
-    "case2-project-health/docs/meeting-notes/week08_20260219.md",
-    "case2-project-health/docs/meeting-notes/week07_20260212.md"
+    "templates/data-analysis-templates.md"
   ]
 }
