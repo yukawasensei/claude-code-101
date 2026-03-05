@@ -183,8 +183,10 @@
       "bases:新建数据库": false
     }
   },
-  "active": "215c7d6e0344a158",
+  "active": "1041a4c488ee1991",
   "lastOpenFiles": [
+    "case1-tiktok-analysis/dashboard.html",
+    "case1-tiktok-analysis/analysis_report.md",
     "case1-tiktok-analysis/README.md",
     "case1-tiktok-analysis/generate_data.py",
     "skills/live-ops-analytics/SKILL.md",
@@ -219,8 +221,6 @@
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
-    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
-    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
-    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md"
+    "case1-tiktok-analysis/venv/lib/python3.14/site-packages/numpy-2.4.2.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md"
   ]
 }

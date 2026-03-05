@@ -2,15 +2,31 @@
 
 ## 案例简介
 
-这是一个面向运营人员的实战案例,教你如何使用 Claude Code 和提示词自动生成高质量的数据分析报告和可视化网页。
+这是一个完整的输入输出示例，展示如何使用 Claude Code 和提示词自动生成高质量的数据分析报告和可视化网页。
 
-**场景**:你是一名直播+短视频运营,负责公司的 TikTok 账号。过去两个月发布了50场直播和短视频,现在需要分析数据,找出高转化内容的规律,为下个月的运营策略提供依据。
+**场景**：你是一名直播+短视频运营，负责公司的 TikTok 账号。过去两个月发布了50场直播和短视频，现在需要分析数据，找出高转化内容的规律，为下个月的运营策略提供依据。
 
-**学习目标**:
-- 掌握提示词编写技巧
-- 学会使用 `/live-ops-analytics` skill 生成深度分析报告
-- 学会使用 `/frontend-design` skill 生成可视化网页
-- 一个提示词完成所有分析
+**本案例包含**：
+- **输入数据**：tiktok_data.csv（50条记录）
+- **输出示例**：analysis_report.md（8000+字深度分析报告）+ dashboard.html（现代化可视化网页）
+- **学习目标**：理解如何使用提示词让 Claude Code 自动生成高质量分析结果
+
+## 文件结构
+
+```
+case1-tiktok-analysis/
+├── tiktok_data.csv          # 输入：50条直播和短视频数据
+├── analysis_report.md       # 输出：深度分析报告
+├── dashboard.html           # 输出：可视化网页
+└── README.md                # 案例说明
+```
+
+**输入文件**：
+- `tiktok_data.csv`：包含50条记录，22个字段（基础数据、直播数据、投流数据、互动数据）
+
+**输出文件**：
+- `analysis_report.md`：8000+字深度分析报告，包含数据概览、关键发现、优化建议、执行计划
+- `dashboard.html`：现代化可视化网页，包含核心指标卡片、交互式图表、数据表格
 
 ## 数据说明
 
@@ -70,25 +86,21 @@
 
 ## 使用方法
 
-### 1. 重新生成数据(可选)
+### 1. 查看示例输出
 
-如果你想重新生成数据:
-
-```bash
-cd case1-tiktok-analysis
-python3 generate_data.py
-```
-
-### 2. 启动 Claude Code
+本案例已经包含完整的输出示例，你可以直接查看：
 
 ```bash
-cd case1-tiktok-analysis
-claude
+# 查看分析报告
+cat analysis_report.md
+
+# 在浏览器中打开可视化网页
+open dashboard.html
 ```
 
-### 3. 使用提示词生成分析
+### 2. 使用提示词复现分析
 
-复制以下提示词,粘贴到 Claude Code 中:
+如果你想在自己的数据上复现这个分析，可以使用以下提示词：
 
 ```
 我有一份直播和短视频运营数据（tiktok_data.csv），包含50场直播和短视频的完整数据。
@@ -122,17 +134,22 @@ claude
 - 网页：dashboard.html
 ```
 
-### 4. 查看生成的结果
+### 3. 启动 Claude Code
 
 ```bash
-# 查看分析报告
-cat analysis_report.md
-
-# 在浏览器中打开可视化网页
-open dashboard.html
+cd case1-tiktok-analysis
+claude
 ```
 
-## 预期输出
+### 4. 粘贴提示词并执行
+
+将上面的提示词粘贴到 Claude Code 中，Claude 会自动：
+1. 读取 tiktok_data.csv 数据
+2. 调用 /live-ops-analytics skill 生成深度分析报告
+3. 调用 /frontend-design skill 生成可视化网页
+4. 保存结果到 analysis_report.md 和 dashboard.html
+
+## 示例输出说明
 
 ### 分析报告 (analysis_report.md)
 - 数据概览
