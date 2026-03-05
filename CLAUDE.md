@@ -24,14 +24,83 @@
 
 ```
 claude-code-101/
+├── README.md                      # 项目总览
+├── CLAUDE.md                      # 本文件
 ├── claude-code-101-tutorial.md    # 主教程文档（完整指南）
+├── img/                           # 教程配图
+│   ├── warp.png
+│   ├── cd-2-project.png
+│   ├── cc-switch.png
+│   ├── claude-dangerously-skip-permissions.png
+│   ├── claude-code-start.png
+│   └── dashboard.png
+├── attachments/                   # 附件资料
+│   ├── commands-cheatsheet.md    # 命令速查表
+│   ├── prompt-templates.md       # 提示词模板
+│   └── advanced-tips.md          # 进阶技巧
 ├── case1-tiktok-analysis/         # 案例：TikTok 直播+短视频运营分析
-│   ├── tiktok_data.csv           # 50条直播和视频记录及完整数据
-│   ├── generate_data.py          # 数据生成脚本
-│   └── README.md                 # 案例说明
+│   ├── README.md                 # 案例说明
+│   ├── tiktok_data.csv           # 50条直播和视频记录
+│   ├── analysis_report.md        # 示例输出：分析报告
+│   └── dashboard.html            # 示例输出：可视化网页
 └── skills/                        # Skills 目录
     └── live-ops-analytics/        # 直播运营分析 skill
+        ├── SKILL.md              # Skill 定义
+        └── references/           # 分析参考文档
+
+## 快速开始
+
+### 安装 Claude Code
+```bash
+npm install -g @anthropic-ai/claude-code
+claude --version
 ```
+
+### 启动项目
+```bash
+cd /Users/huangzhipeng/Coding/claude-code-101
+claude --dangerously-skip-permissions  # YOLO 模式，减少权限确认
+```
+
+### 运行案例
+```bash
+cd case1-tiktok-analysis
+claude --dangerously-skip-permissions
+# 然后粘贴教程中的提示词执行
+```
+
+## 学习路径
+
+### 路径 A：先看结果（最快）
+适合快速建立"结果感知"，了解 Claude Code 能做什么。
+
+```bash
+cd case1-tiktok-analysis
+cat analysis_report.md      # 查看分析报告
+open dashboard.html         # 在浏览器中查看可视化网页
+```
+
+### 路径 B：完整复现（推荐）
+适合系统学习提示词编写和 skills 使用。
+
+1. 阅读主教程：`claude-code-101-tutorial.md`
+2. 进入案例目录：`cd case1-tiktok-analysis`
+3. 启动 Claude Code：`claude --dangerously-skip-permissions`
+4. 使用教程中的提示词生成报告和网页
+5. 对比示例产物，迭代优化提示词
+
+## 教程文档
+
+### 主教程
+- `claude-code-101-tutorial.md`：从 0 到 1 的完整操作路径
+
+### 附件资料
+- `attachments/commands-cheatsheet.md`：常用命令速查表
+- `attachments/prompt-templates.md`：提示词模板和示例
+- `attachments/advanced-tips.md`：进阶技巧和最佳实践
+
+### 案例文档
+- `case1-tiktok-analysis/README.md`：案例详细说明
 
 ## 案例说明
 
@@ -46,13 +115,6 @@ claude-code-101/
   - 互动数据：danmu_count、gift_count、follow_conversion_rate
 
 ## 使用此代码库
-
-### 数据生成
-案例包含 Python 脚本来重新生成示例数据：
-```bash
-cd case1-tiktok-analysis
-python generate_data.py
-```
 
 ### 分析工作流程
 当用户请求数据分析时：
@@ -95,3 +157,22 @@ python generate_data.py
 - 最小化学习曲线
 - 快速上手，立即产出
 - 重点展示结果，而不是过程
+
+## 常见问题
+
+### 没有编程基础可以学吗？
+可以。本项目重点是"会描述需求"，不是"会写代码"。
+
+### 为什么推荐 `--dangerously-skip-permissions`？
+这是高效率模式（YOLO）。教程里用它来减少反复权限确认，但请在可控目录中使用。
+
+### 必须用 TikTok 这份数据吗？
+不是。你可以替换为自己的 CSV，只要在提示词里明确字段含义和输出要求。
+
+### 如何定制分析报告？
+在提示词中详细描述你想要的分析维度、报告风格、输出格式等，Claude Code 会根据你的要求生成。
+
+## 相关链接
+
+- [Claude Code 官方文档](https://docs.claude.ai/code)
+- [Anthropic 官网](https://www.anthropic.com)

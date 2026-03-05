@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "claude-code-101-tutorial.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "claude-code-101-tutorial"
+              "title": "README"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "claude-code-101-tutorial.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "claude-code-101-tutorial 的大纲"
+              "title": "README 的大纲"
             }
           }
         ],
@@ -185,15 +185,16 @@
   },
   "active": "215c7d6e0344a158",
   "lastOpenFiles": [
-    "case1-tiktok-analysis/analysis_report.md",
+    "case1-tiktok-analysis/README.md",
+    "README.md",
     "claude-code-101-tutorial.md",
+    "case1-tiktok-analysis/analysis_report.md",
     "img/dashboard.png",
     "img/image.png",
     "img/claude-code-start.png",
     "img/claude-dangerously-skip-permissions.png",
     "img/cd-2-project.png",
     "img/warp-pwd.png",
-    "README.md",
     "attachments/prompt-templates.md",
     "attachments/mock-data-design.md",
     "attachments/commands-cheatsheet.md",
@@ -215,7 +216,6 @@
     "case1-tiktok-analysis/dashboard_new.html",
     "case1-tiktok-analysis/data_array.js",
     "case1-tiktok-analysis/dashboard.html",
-    "case1-tiktok-analysis/README.md",
     "case1-tiktok-analysis/generate_data.py",
     "skills/live-ops-analytics/SKILL.md",
     "skills/live-ops-analytics/output-ops.md",

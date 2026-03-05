@@ -1,149 +1,115 @@
 # Claude Code 101 教程
 
-欢迎来到 Claude Code 101 教程！这是一个面向非技术背景人员的 Claude Code 入门教程，通过两个实战案例帮助你快速掌握 Claude Code 的核心功能。
+面向非技术背景用户的 Claude Code 入门项目。你可以用一份真实感较强的 TikTok 运营数据，完整体验：
+- 提示词驱动的数据分析
+- 自动生成管理层可读报告
+- 自动生成可视化仪表盘网页
 
-## 📚 教程简介
+## 你将得到什么
 
-本教程专为以下人群设计：
-- 运营人员
+- 主教程文档：从 0 到 1 的完整操作路径
+- Case 1 实战：可直接复现的数据分析案例
+- 示例产物：`analysis_report.md` + `dashboard.html`
+- 常用附件：命令速查、提示词模板、进阶技巧
+
+## 项目结构（当前）
+
+```text
+claude-code-101/
+├── README.md
+├── claude-code-101-tutorial.md
+├── CLAUDE.md
+├── img/
+│   ├── warp.png
+│   ├── cd-2-project.png
+│   ├── cc-switch.png
+│   ├── claude-dangerously-skip-permissions.png
+│   ├── claude-code-start.png
+│   └── dashboard.png
+├── attachments/
+│   ├── commands-cheatsheet.md
+│   ├── prompt-templates.md
+│   └── advanced-tips.md
+├── case1-tiktok-analysis/
+│   ├── README.md
+│   ├── tiktok_data.csv
+│   ├── analysis_report.md
+│   └── dashboard.html
+└── skills/
+    └── live-ops-analytics/
+```
+
+## 快速开始
+
+### 1) 安装 Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+claude --version
+```
+
+### 2) 打开主教程
+
+先阅读主教程：[`claude-code-101-tutorial.md`](./claude-code-101-tutorial.md)
+
+### 3) 运行 Case 1（推荐）
+
+```bash
+cd case1-tiktok-analysis
+claude --dangerously-skip-permissions
+```
+
+进入 Claude Code 后，粘贴教程里 `5.3` 的完整提示词执行。
+
+## 两种学习路径
+
+### 路径 A：先看现成结果（最快）
+
+```bash
+cd case1-tiktok-analysis
+cat analysis_report.md
+open dashboard.html
+```
+
+适合先建立“结果感知”，再回头学习提示词结构。
+
+### 路径 B：完整复现（推荐）
+
+1. 按主教程完成环境准备与启动。
+2. 使用 `5.3` 提示词生成报告和网页。
+3. 对比 `case1-tiktok-analysis/` 中的示例产物，迭代你的提示词。
+
+## 教程阅读顺序
+
+1. [`claude-code-101-tutorial.md`](./claude-code-101-tutorial.md)
+2. [`attachments/commands-cheatsheet.md`](./attachments/commands-cheatsheet.md)
+3. [`attachments/prompt-templates.md`](./attachments/prompt-templates.md)
+4. [`attachments/advanced-tips.md`](./attachments/advanced-tips.md)
+5. [`case1-tiktok-analysis/README.md`](./case1-tiktok-analysis/README.md)
+
+## 适用人群
+
+- 运营
 - 产品经理
 - 数据分析师
-- 项目经理
-- 其他非技术背景但需要数据分析能力的人员
+- 非技术背景、但需要快速产出分析报告的人
 
-**学习目标**：
-- 掌握 Claude Code 的基本操作
-- 学会使用 Claude Code 进行数据分析
-- 学会生成可视化图表和报告
-- 提升数据驱动决策能力
+## 常见问题
 
-## 📖 教程结构
+### 没有编程基础可以学吗？
+可以。本项目重点是“会描述需求”，不是“会写代码”。
 
-### 主教程文档
-- **[claude-code-101-tutorial.md](./claude-code-101-tutorial.md)** - 完整的教程文档，包含：
-  - Claude Code 基础知识
-  - 数据分析工作流程
-  - 提示词编写技巧
-  - 两个完整的实战案例
-  - 常见问题解答
+### 为什么推荐 `--dangerously-skip-permissions`？
+这是高效率模式（YOLO）。教程里用它来减少反复权限确认，但请在可控目录中使用。
 
-### 实战案例
+### 必须用 TikTok 这份数据吗？
+不是。你可以替换为自己的 CSV，只要在提示词里明确字段含义和输出要求。
 
-#### Case 1: TikTok 数据分析
-**目录**: `case1-tiktok-analysis/`
-
-分析 TikTok 视频数据，找出高转化视频的特征。
-
-**包含内容**：
-- 50 条 TikTok 视频数据（CSV 格式）
-- 数据生成脚本
-- 详细的案例说明
-
-**学习重点**：
-- 提示词编写技巧
-- 使用 skills 自动生成分析报告
-- 数据可视化仪表盘
-- 高质量报告生成
-
-## 🚀 快速开始
-
-### 1. 安装 Claude Code
-
-```bash
-# macOS/Linux
-curl -fsSL https://claude.ai/install.sh | sh
-
-# 或使用 npm
-npm install -g @anthropic-ai/claude-code
-```
-
-### 2. 启动 Claude Code
-
-```bash
-cd claude-code-101
-claude
-```
-
-### 3. 开始学习
-
-1. 阅读主教程文档：`claude-code-101-tutorial.md`
-2. 完成 Case 1：TikTok 数据分析
-3. 应用到自己的实际工作场景
-
-## 📁 项目结构
-
-```
-claude-code-101/
-├── README.md                          # 项目总览（本文件）
-├── claude-code-101-tutorial.md       # 主教程文档
-├── CLAUDE.md                          # Claude Code 项目指导
-├── case1-tiktok-analysis/             # Case 1：TikTok 数据分析
-│   ├── README.md                      # Case 1 说明
-│   ├── tiktok_data.csv                # 示例数据
-│   └── generate_data.py               # 数据生成脚本
-└── skills/                            # Skills 目录
-    └── live-ops-analytics/            # 直播运营分析 skill
-```
-
-## 💡 使用建议
-
-1. **快速上手**：教程聚焦于提示词编写，让你快速掌握核心技能
-2. **动手实践**：不要只看教程，一定要亲自操作
-3. **理解原理**：理解提示词的编写逻辑，而不是死记硬背
-4. **举一反三**：尝试将学到的技能应用到自己的工作中
-
-## 🎯 学习路径
-
-### 快速入门（1-2 小时）
-- 阅读教程第 1-4 章
-- 了解 Claude Code 基础操作
-- 学会编写基本提示词
-
-### 实战应用（2-3 小时）
-- 完成 Case 1 的完整分析
-- 学会使用 skills 生成报告
-- 掌握数据可视化技巧
-
-### 进阶提升（持续）
-- 将技能应用到实际工作中
-- 探索更多 skills 和高级功能
-- 优化和定制自己的分析流程
-
-## 📝 常见问题
-
-### Q: 我完全没有编程基础，能学会吗？
-A: 可以！本教程专为非技术人员设计，不需要编程基础。Claude Code 会帮你生成和执行代码。
-
-### Q: 需要安装 Python 吗？
-A: 是的，Claude Code 需要 Python 环境。教程中有详细的安装说明。
-
-### Q: 学完后能做什么？
-A: 你将能够：
-- 使用提示词让 Claude Code 自动完成数据分析
-- 生成专业的数据可视化图表和仪表盘
-- 撰写数据驱动的分析报告
-- 提升工作效率和决策质量
-
-### Q: 遇到问题怎么办？
-A:
-1. 查看教程的"常见问题"章节
-2. 尝试用不同的方式描述你的需求
-3. 参考教程中的提示词示例
-
-## 🔗 相关资源
+## 相关链接
 
 - [Claude Code 官方文档](https://docs.claude.ai/code)
-- [Claude Code GitHub](https://github.com/anthropics/claude-code)
 - [Anthropic 官网](https://www.anthropic.com)
-
-## 📄 许可证
-
-本教程采用 MIT 许可证。你可以自由使用、修改和分享本教程内容。
-
-## 🙏 致谢
-
-感谢所有为本教程提供反馈和建议的朋友们！
 
 ---
 
-**开始学习**: 打开 [claude-code-101-tutorial.md](./claude-code-101-tutorial.md) 开始你的 Claude Code 之旅！
+从这里开始：[`claude-code-101-tutorial.md`](./claude-code-101-tutorial.md)

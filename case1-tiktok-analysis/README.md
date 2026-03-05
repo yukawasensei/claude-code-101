@@ -1,201 +1,93 @@
-# Case 1: TikTok 直播+短视频运营分析
+# Case 1：TikTok 直播 + 短视频运营分析
 
-## 案例简介
+这是 `claude-code-101` 的第一个实战案例。你将用一份 50 条样本数据，生成：
+- 管理层可读分析报告：`analysis_report.md`
+- 可视化仪表盘网页：`dashboard.html`
 
-这是一个完整的输入输出示例，展示如何使用 Claude Code 和提示词自动生成高质量的数据分析报告和可视化网页。
+## 本目录包含什么
 
-**场景**：你是一名直播+短视频运营，负责公司的 TikTok 账号。过去两个月发布了50场直播和短视频，现在需要分析数据，找出高转化内容的规律，为下个月的运营策略提供依据。
-
-**本案例包含**：
-- **输入数据**：tiktok_data.csv（50条记录）
-- **输出示例**：analysis_report.md（8000+字深度分析报告）+ dashboard.html（现代化可视化网页）
-- **学习目标**：理解如何使用提示词让 Claude Code 自动生成高质量分析结果
-
-## 文件结构
-
-```
+```text
 case1-tiktok-analysis/
-├── tiktok_data.csv          # 输入：50条直播和短视频数据
-├── analysis_report.md       # 输出：深度分析报告
-├── dashboard.html           # 输出：可视化网页
-└── README.md                # 案例说明
+├── README.md
+├── tiktok_data.csv
+├── analysis_report.md
+└── dashboard.html
 ```
 
-**输入文件**：
-- `tiktok_data.csv`：包含50条记录，22个字段（基础数据、直播数据、投流数据、互动数据）
+- `tiktok_data.csv`：输入数据（50 条记录，22 个字段）
+- `analysis_report.md`：示例分析报告
+- `dashboard.html`：示例可视化网页
 
-**输出文件**：
-- `analysis_report.md`：8000+字深度分析报告，包含数据概览、关键发现、优化建议、执行计划
-- `dashboard.html`：现代化可视化网页，包含核心指标卡片、交互式图表、数据表格
-
-## 数据说明
-
-### 数据文件
-- **文件名**: `tiktok_data.csv`
-- **记录数**: 50条
-- **字段数**: 22个
-
-### 字段说明
-
-#### 基础数据(11个字段)
-- `video_id`: 视频ID
-- `title`: 视频标题
-- `publish_date`: 发布日期(YYYY-MM-DD)
-- `publish_hour`: 发布小时(0-23)
-- `views`: 播放量
-- `likes`: 点赞数
-- `comments`: 评论数
-- `shares`: 分享数
-- `duration`: 视频时长(秒)
-- `video_type`: 视频类型(教程、测评、好物推荐、剧情)
-- `conversions`: 成单量/转化量
-
-#### 直播数据(5个字段)
-- `live_uv`: 场观/观看人数
-- `peak_online`: 在线峰值
-- `avg_watch_time`: 人均停留时长(秒)
-- `gmv`: 成交金额(元)
-- `order_conversion_rate`: 下单转化率(%)
-
-#### 投流数据(3个字段)
-- `ad_cost`: 广告花费(元)
-- `cpm`: 千次观看成本(元)
-- `roi`: 投资回报率(%)
-
-#### 互动数据(3个字段)
-- `danmu_count`: 弹幕数
-- `gift_count`: 礼物数
-- `follow_conversion_rate`: 关注转化率(%)
-
-## 数据特点
-
-### 发布时间影响
-- 19:00-21:00 发布的视频,播放量在 20000-50000
-- 其他时段,播放量在 5000-20000
-
-### 视频类型转化率
-- 教程类: 6-10‱
-- 测评类: 4-8‱
-- 好物推荐: 3-7‱
-- 剧情类: 1-5‱
-
-### 互动数据关系
-- 点赞量 = 播放量 × (5%-15%)
-- 评论量 = 播放量 × (1%-3%)
-- 分享量 = 播放量 × (0.5%-2%)
-
-## 使用方法
-
-### 1. 查看示例输出
-
-本案例已经包含完整的输出示例，你可以直接查看：
-
-```bash
-# 查看分析报告
-cat analysis_report.md
-
-# 在浏览器中打开可视化网页
-open dashboard.html
-```
-
-### 2. 使用提示词复现分析
-
-如果你想在自己的数据上复现这个分析，可以使用以下提示词：
-
-```
-我有一份直播和短视频运营数据（tiktok_data.csv），包含50场直播和短视频的完整数据。
-
-请使用 /live-ops-analytics skill 生成一份深度分析报告，包含：
-1. 数据概览和关键指标
-2. 直播间表现分析（场观、停留时长、转化率）
-3. 短视频效果分析（播放量、互动率、引流效果）
-4. ROI和投流分析（广告花费、CPM、ROI）
-5. 用户互动分析（弹幕、礼物、关注）
-6. 优化建议和下月策略
-
-报告要求：
-- 适合给老板看的管理层汇报风格
-- 每个建议都要有数据支撑
-- 建议要具体可执行
-
-然后使用 /frontend-design skill 生成一个现代化的可视化网页，包含：
-1. 顶部核心指标卡片（6-8个关键指标）
-2. 多维度数据图表（柱状图、折线图、散点图、漏斗图）
-3. 数据表格（支持排序和筛选）
-4. 响应式布局，适配桌面和移动端
-
-设计要求：
-- 现代简洁风格
-- 蓝白配色
-- 高质量的视觉呈现
-
-文件名：
-- 报告：analysis_report.md
-- 网页：dashboard.html
-```
-
-### 3. 启动 Claude Code
+## 先看结果（1 分钟）
 
 ```bash
 cd case1-tiktok-analysis
-claude
+cat analysis_report.md
+open dashboard.html
 ```
 
-### 4. 粘贴提示词并执行
+![Dashboard 示例](../img/dashboard.png)
 
-将上面的提示词粘贴到 Claude Code 中，Claude 会自动：
-1. 读取 tiktok_data.csv 数据
-2. 调用 /live-ops-analytics skill 生成深度分析报告
-3. 调用 /frontend-design skill 生成可视化网页
-4. 保存结果到 analysis_report.md 和 dashboard.html
+## 完整复现（推荐）
 
-## 示例输出说明
+### 1) 启动 Claude Code
 
-### 分析报告 (analysis_report.md)
-- 数据概览
-- 关键发现(5-8条)
-- 详细分析(多个维度)
-- 优化建议(8-10条具体建议)
-- 下月策略(详细执行计划)
+在本目录执行：
 
-### 可视化网页 (dashboard.html)
-- 核心指标卡片
-- 交互式图表
-- 数据表格
-- 响应式设计
+```bash
+cd case1-tiktok-analysis
+claude --dangerously-skip-permissions
+```
 
-## 学习要点
+### 2) 粘贴提示词（来自主教程 5.3）
 
-1. **提示词编写**:清晰、具体、完整地描述需求
-2. **Skills 使用**:如何调用和组合多个 skills
-3. **自动化分析**:一个提示词完成所有工作
-4. **结果导向**:重点关注输出质量,而不是过程
+使用主教程 [`../claude-code-101-tutorial.md`](../claude-code-101-tutorial.md) 第 `5.3` 节中的完整提示词。
 
-## 进阶练习
+核心要求：
+- 使用 `/live-ops-analytics` 生成深度分析报告
+- 使用 `/frontend-design` 生成可视化网页
+- 输出文件名固定为：`analysis_report.md`、`dashboard.html`
 
-完成基础分析后,可以尝试:
+### 3) 查看输出
 
-1. **定制分析维度**:增加自己关心的分析维度
-2. **调整报告风格**:改为周报、月报等不同格式
-3. **优化可视化**:调整图表类型和配色方案
-4. **应用到实际工作**:使用自己的真实数据
+```bash
+cat analysis_report.md
+open dashboard.html
+```
+
+## 数据字段速览
+
+### 基础数据（11）
+`video_id` `title` `publish_date` `publish_hour` `views` `likes` `comments` `shares` `duration` `video_type` `conversions`
+
+### 直播数据（5）
+`live_uv` `peak_online` `avg_watch_time` `gmv` `order_conversion_rate`
+
+### 投流数据（3）
+`ad_cost` `cpm` `roi`
+
+### 互动数据（3）
+`danmu_count` `gift_count` `follow_conversion_rate`
+
+## 如何替换为你的真实数据
+
+1. 用你自己的 CSV 替换 `tiktok_data.csv`（或改文件名并在提示词中声明）。
+2. 保证字段含义清晰，必要时在提示词里补充说明。
+3. 保留输出文件名不变，方便对比与迭代。
 
 ## 常见问题
 
-### Q: 数据是真实的吗?
-A: 这是模拟数据,用于学习目的。数据规律基于真实运营经验设计,具有参考价值。
+### 数据是线上真实数据吗？
+不是，这是教程用的模拟数据，目的是学习分析流程和提示词方法。
 
-### Q: 可以用自己的数据吗?
-A: 可以!只需将你的数据整理成相同的 CSV 格式,字段名保持一致即可。
+### 报告不符合预期怎么办？
+先改提示词，不要先改代码。把分析目标、指标口径、输出风格写具体。
 
-### Q: 生成的报告不满意怎么办?
-A: 可以调整提示词,明确说明你想要什么样的报告。提示词越具体,结果越符合预期。
+### 可以只生成报告，不生成网页吗？
+可以。在提示词里删除网页生成要求即可。
 
-### Q: 如何定制可视化网页?
-A: 在提示词中详细描述你想要的样式、配色、图表类型等,Claude Code 会根据你的要求生成。
+## 相关文档
 
-## 相关资源
-
-- 主教程: `../claude-code-101-tutorial.md`
-- Skills 文档: `../skills/live-ops-analytics/`
-- 项目总览: `../README.md`
+- 主教程：[`../claude-code-101-tutorial.md`](../claude-code-101-tutorial.md)
+- 项目总览：[`../README.md`](../README.md)
+- 附件：[`../attachments/`](../attachments/)
