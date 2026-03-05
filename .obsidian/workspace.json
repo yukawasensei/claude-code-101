@@ -185,13 +185,18 @@
   },
   "active": "215c7d6e0344a158",
   "lastOpenFiles": [
-    "OPTIMIZATION_SUMMARY.md",
     "README.md",
+    "claude-code-101-tutorial.md",
+    "attachments/prompt-templates.md",
+    "attachments/mock-data-design.md",
+    "attachments/commands-cheatsheet.md",
+    "attachments/advanced-tips.md",
+    "attachments",
+    "claude-code-101-tutorial-backup.md",
+    "OPTIMIZATION_SUMMARY.md",
     "prompt-templates.md",
     "mock-data-design.md",
     "commands-cheatsheet.md",
-    "claude-code-101-tutorial-backup.md",
-    "claude-code-101-tutorial.md",
     "CLAUDE.md",
     "advanced-tips.md",
     "case1-tiktok-analysis/analysis_report.md",
@@ -220,11 +225,6 @@
     "skills/live-ops-analytics",
     "optimization-report.md",
     "case1-tiktok-analysis/QUICK_START.md",
-    "case1-tiktok-analysis/scripts/quick_start.sh",
-    "case1-tiktok-analysis/HTML_REPORT_SUMMARY.md",
-    "case1-tiktok-analysis/scripts/README_HTML_REPORT.md",
-    "case2-project-health/example-report.md",
-    "case1-tiktok-analysis/RESULTS.md",
     "case1-tiktok-analysis/venv/lib/python3.14/site-packages/scipy/ndimage/tests/dots.png"
   ]
 }
